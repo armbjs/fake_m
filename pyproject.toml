@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "fake_pubsub_m"
+version = "1.0.2"
+description = ""
+authors = ["armbjs <armbjs@naver.com>"]
+readme = "README.md"
+packages = [{ include = "fake_pubsub_m" },]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+anthropic = "^0.31.2"
+toml = "^0.10.2"
+tomlkit = "^0.13.0"
+pytz = "^2024.1"
+python-dotenv = "^1.0.1"
+redis = "^5.2.0"
+apscheduler = "^3.11.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+pylint = "^2.15"
+mypy = "^1.0"
+
+[tool.poetry.scripts]
+patp = "scripts:patp"
+minp = "scripts:minp"
+majp = "scripts:majp"
+type_check = "scripts:type_check"
+test = "scripts:test"
+check_all = "scripts:check_all"
+
+[tool.current-project]
+poetry-publish-enabled = true
+docker-enabled = true
+workflow-enabled = true
+
+[[tool.poetry.source]]
+name = "pdr"
+url = "http://docker.armbjs.com:8080"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
