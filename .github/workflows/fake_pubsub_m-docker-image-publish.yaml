@@ -24,7 +24,7 @@ jobs:
 
       - name: Build fake_pubsub_m Docker Image
         working-directory: ./docker
-        run: docker build . --no-cache --file Dockerfile --tag docker.armbjs.com:5000/fake_pubsub_m:1.0.2 --tag docker.armbjs.com:5000/fake_pubsub_m:latest --build-arg "PPI_USERNAME=${{ secrets.PPI_USERNAME }}" --build-arg "PPI_PASSWORD=${{ secrets.PPI_PASSWORD }}"
+        run: docker build . --no-cache --file Dockerfile --tag docker.armbjs.com:5000/fake_pubsub_m:1.1.0 --tag docker.armbjs.com:5000/fake_pubsub_m:latest --build-arg "PPI_USERNAME=${{ secrets.PPI_USERNAME }}" --build-arg "PPI_PASSWORD=${{ secrets.PPI_PASSWORD }}"
 
       - name: Push fake_pubsub_m Docker Image
         working-directory: ./docker
